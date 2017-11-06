@@ -10,9 +10,9 @@ public class MainWindow extends JFrame{
     public MainWindow() {
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setTitle("Runner Main Window");
-        setVisible(true);
+
 //        this.setResizable(false);
-//        setLocationRelativeTo(null);
+        setLocationRelativeTo(null);
 
         GameField gf = new GameField();
         width = gf.getWidth()+100;
@@ -20,6 +20,7 @@ public class MainWindow extends JFrame{
         setSize(width, height);
 
         add(gf);
+        setVisible(true);
     }
 
     public static void main(String[] args) {

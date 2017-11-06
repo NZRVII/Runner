@@ -14,14 +14,14 @@ public class Prepatstviya {
         this.leftBorderOfRoad = leftBorderOfRoad;
         this.roadWidth = roadWidth;
         this.roadLength = roadLength;
-        this.positionX = leftBorderOfRoad + (int) (Math.random()*roadWidth);
-        this.positionY = -roadLength + (int)(Math.random()*roadLength);
         this.size = 10;
         this.speed = 10 + (int) (Math.random()*10);
+        this.positionX = leftBorderOfRoad + (int) (Math.random()*(roadWidth-size));
+        this.positionY = -roadLength + (int)(Math.random()*roadLength);
     }
 
     public void reCreate(){
-        positionX = leftBorderOfRoad + (int) (Math.random()*roadWidth);
+        positionX = leftBorderOfRoad + (int) (Math.random()*(roadWidth - size));
         positionY = -roadLength/10;
         speed = 10 + (int) (Math.random()*10);
     }
